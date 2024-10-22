@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript E-commerce - JSD#8 GenKX</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://39-virachai-js.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JavaScript E-commerce - JSD#8 GenKX" />
+    <meta
+      property="og:description"
+      content="Assessment JavaScript E-commerce - GenKX by Virachai Wongsena."
+    />
+    <meta
+      property="og:image"
+      content="https://39-virachai-colmar.vercel.app/assets/images/banner.jpg"
+    />
+    <meta
+      property="og:logo"
+      content="https://39-virachai-colmar.vercel.app/assets/images/ic-logo.svg"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="39-virachai-js.vercel.app" />
+    <meta property="twitter:url" content="https://39-virachai-js.vercel.app/" />
+    <meta name="twitter:title" content="Colmar Academy - JSD#8 GenKX" />
+    <meta
+      name="twitter:description"
+      content="Assessment JavaScript E-commerce - GenKX by Virachai Wongsena."
+    />
+    <meta
+      name="twitter:image"
+      content="https://39-virachai-colmar.vercel.app/assets/images/banner.jpg"
+    />
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/4.3/dist/css/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/4.3/examples/navbars/navbar.css"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/4.3/scss/_navbar.scss"
+    /> -->
+  </head>
+  <body>
+    <!-- Header Section with Navigation -->
+    <header class="hidden">
+      <!-- Navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li>
+              <a
+                class="nav-link text-white"
+                title="nav-link text-white"
+                href="#"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- <ul class="navbar-nav d-flex flex-row me-1">
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" title="nav-link text-white" href="#"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link text-white" title="nav-link text-white" href="#"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+      </ul> -->
+
+      <!-- Navbar -->
+      <style>
+        /* Style the form - display items horizontally */
+        .form-inline > div,
+        .form-inline {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+        }
+
+        /* Add some margins for each label */
+        .form-inline label {
+          margin: 5px 10px 5px 0;
+        }
+
+        /* Style the input fields */
+        .form-inline input {
+          vertical-align: middle;
+          margin: 5px 10px 5px 0;
+          padding: 10px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+        }
+
+        /* Style the submit button */
+        .form-inline button {
+          padding: 10px 20px;
+          background-color: dodgerblue;
+          border: 1px solid #ddd;
+          color: white;
+        }
+
+        .form-inline button:hover {
+          background-color: royalblue;
+        }
+
+        .wpforms-form {
+          padding: 20px;
+          padding-top: 0px;
+          border-radius: 3px;
+          border-width: 2px;
+          border-color: #b95d52;
+          border-style: double;
+          margin-bottom: 32px;
+        }
+        #addProductForm .showImg {
+          display: none;
+        }
+        #productList .btnRemove,
+        #productListCart .inputTag,
+        #productListCart input.cb,
+        #productList .inputTag {
+          display: none;
+        }
+        #productList .form-inline {
+          position: relative;
+        }
+        #productList li + li {
+          margin-top: 16px;
+        }
+        #productListCart li img,
+        #productList li img {
+          margin-right: 16px;
+        }
+        #productList li .productInfo {
+          display: flex;
+          flex-direction: column;
+          align-self: start;
+        }
+        #pay:before,
+        .dollar:before {
+          content: "$";
+        }
+        #pay:after,
+        .dollar:after {
+          content: ".00";
+        }
+        /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+        @media (max-width: 800px) {
+          .form-inline input {
+            margin: 10px 0;
+          }
+
+          .form-inline > div,
+          .form-inline {
+            flex-direction: column;
+            align-items: stretch;
+          }
+        }
+      </style>
+    </header>
+
+    <main>
+      <section class="container">
+        <h1 style="text-align: center">Shopping Cart</h1>
+      </section>
+      <section id="addProductForm" class="container wpforms-form">
+        <h2>Product Form</h2>
+        <ul id="addProductUl">
+          <li>
+            <form
+              class="form-inline"
+              action="./index.html"
+              method="post"
+              onsubmit="btnAdd(event)"
+            >
+              <div class="inputTag">
+                <label for="productName">Product Name:</label>
+                <input
+                  type="text"
+                  placeholder="Enter Product Name"
+                  class="productName"
+                  name="productName"
+                  maxlength="300"
+                  value="Product Name"
+                  required
+                />
+                <label for="productPrice">Price:</label>
+                <input
+                  type="number"
+                  placeholder="Price"
+                  class="productPrice"
+                  name="productPrice"
+                  min="1"
+                  max="10000"
+                  value="48"
+                  step="1"
+                  required
+                />
+
+                <label for="productImage">Image:</label>
+                <input
+                  type="text"
+                  placeholder="Enter Image URL"
+                  name="productImage"
+                  class="productImage"
+                  maxlength="1000"
+                  required
+                  value="https://placehold.co/1"
+                />
+
+                <label>
+                  <button type="submit" class="btn btn-primary" name="addProd">
+                    Create Product
+                  </button></label
+                >
+                <!-- <label>
+              <button type="reset" class="btn clearForm">Reset</button></label
+            > -->
+              </div>
+              <div class="showImg">
+                <div class="placehold">
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    title="checkbox"
+                    class="cb"
+                  />
+                  <img
+                    src="https://placehold.co/200"
+                    width="100"
+                    height="100"
+                    alt="https://placehold.co/200"
+                    class="placeholdImage"
+                  />
+                </div>
+                <div class="productInfo">
+                  <h4 class="prdName">-</h4>
+                  <p class="prdPrice dollar">0</p>
+                  <p>
+                    <button
+                      onclick="removeFromCart(event)"
+                      type="button"
+                      class="btnRemove"
+                      name="delProd"
+                      style="background-color: orange; padding: 5px 8px"
+                    >
+                      Remove
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </section>
+
+      <section id="productDashboard" class="container wpforms-form">
+        <h2>Product Dashboard</h2>
+        <ul id="productList"></ul>
+      </section>
+      <section
+        class="container"
+        style="padding: 10; margin: 16px auto; margin-top: -16px"
+      >
+        <button
+          onclick="addToCart(event)"
+          type="button"
+          class="btn btn-primary"
+          name="addProdToCart"
+          style="width: 100%; padding: 10px"
+        >
+          Add to Cart
+        </button>
+      </section>
+      <section id="productCart" class="container wpforms-form">
+        <h2>Cart</h2>
+        <ul id="productListCart"></ul>
+      </section>
+
+      <section id="checkoutSection" class="container wpforms-form">
+        <h2>Checkout</h2>
+        <button
+          onclick="calcPrice(event)"
+          type="button"
+          class="btn btn-primary"
+          name="calcPrice"
+          style="width: 100%; padding: 10px"
+        >
+          Calculate Final Price
+        </button>
+        <h3>You have to pay: <span id="pay">0</span></h3>
+      </section>
+    </main>
+
+    <!-- footer > open -->
+    <footer style="text-align: center">
+      <p>© 2024 Ch.AI All rights reserved</p>
+
+      <!-- <div class="menu-footer hidden flex desktop">
+        <div class="link-footer small-font">
+          <a href="#">Terms</a>
+        </div>
+        <div class="link-footer small-font">
+          <a href="#">Privicy</a>
+        </div>
+      </div> -->
+    </footer>
+    <!-- footer > close -->
+    <!-- <div id="app"></div>
+    <script type="module" src="./colmar.js"></script>
+    <script type="module" src="./main.js"></script> -->
+    <script>
+      function calcPrice(x) {
+        if (x && 0) return false;
+        const list = [
+          ...document.querySelectorAll("#productListCart .prdPrice"),
+        ];
+        const pay = list.reduce(
+          (acc, curr) => acc + parseInt(curr.textContent),
+          0
+        );
+        document.querySelector("#pay").textContent = pay;
+        console.log(pay);
+      }
+      function cloneItem(target) {
+        const size = getRndInteger(10, 99);
+        target.querySelector(".prdName").textContent =
+          target.querySelector(".productName").value;
+        target.querySelector(".prdPrice").textContent =
+          target.querySelector(".productPrice").value;
+        target.querySelector(".placeholdImage").src =
+          target.querySelector(".productImage").value;
+        if (
+          target.querySelector(".placeholdImage").src ==
+          "https://placehold.co/1"
+        ) {
+          target.querySelector(".placeholdImage").src += size;
+          target.querySelector(".prdName").textContent =
+            target.querySelector(".productName").value + size;
+          target.querySelector(".prdPrice").textContent = getRndInteger(1, 999);
+        }
+        const node = target.closest("li");
+        const clone = node.cloneNode(true);
+        document.getElementById("productList").appendChild(clone);
+        target.reset();
+      }
+      function btnAdd(x) {
+        cloneItem(x.target);
+        event.preventDefault(x);
+      }
+      function ItemToCart(src) {
+        src.querySelector("input.cb").checked = false;
+        const clone = src.cloneNode(true);
+        document.getElementById("productListCart").appendChild(clone);
+      }
+      function addToCart(x) {
+        if (x && 0) return false;
+        const list = [...document.querySelectorAll("#productList li")];
+        const checked = list.filter((x) => x.querySelector("input.cb:checked"));
+        checked.forEach((x) => {
+          ItemToCart(x.closest("li"));
+        });
+        list.forEach((x) => {
+          x.querySelector("input.cb").checked = false;
+        });
+      }
+      function removeFromCart(x) {
+        if (x && 0) return false;
+        if (!confirm("Want to remove?")) return false;
+        const li = x.target.closest("li");
+        li.parentNode.removeChild(li);
+      }
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      window.onload = (event) => {
+        for (let x = 0; x < 4; x++) {
+          document
+            .querySelector("#addProductForm button[name='addProd']")
+            .click();
+        }
+        document.querySelector("#addProductForm .productName").value = "";
+        // https://picsum.photos/
+        // https://picsum.photos/id/237/200/300
+      };
+    </script>
+  </body>
+</html>
