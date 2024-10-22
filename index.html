@@ -425,8 +425,12 @@
         document.querySelector("#addProductForm .productName").value = "";
         document.querySelector("#addProductForm .productPrice").value = "";
         document.querySelector("#addProductForm .productImage").value = "";
+        document
+          .querySelector("#addProductForm .productImage")
+          .setAttribute("pattern", "https?://.+\.(jpg|png|gif)$");
         // https://picsum.photos/
         // https://picsum.photos/id/237/200/300
+        // pattern="https?://.+\.(jpg|png|gif)$"
       };
     </script>
   </body>
